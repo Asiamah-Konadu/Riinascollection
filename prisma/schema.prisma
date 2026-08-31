@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          String      @id @default(cuid())
+  name        String
+  category    String
+  price       Decimal     @db.Decimal(10, 2)
+  description String?
+  image       String?     // data URL (base64) uploaded from the admin panel
+  inStock     Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  orderItems  OrderItem[]
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  orderNumber  String      @unique
+  customerName String
+  phone        String
+  note         String?
+  total        Decimal     @db.Decimal(10, 2)
+  status       String      @default("pending") // pending | confirmed | fulfilled
+  createdAt    DateTime    @default(now())
+  items        OrderItem[]
+}
+
+model OrderItem {
+  id        String   @id @default(cuid())
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId   String
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  productId String?
+  name      String   // snapshot of product name at time of order
+  price     Decimal  @db.Decimal(10, 2) // snapshot of price at time of order
+  qty       Int      @default(1)
+}
