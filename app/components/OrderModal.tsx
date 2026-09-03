@@ -50,7 +50,26 @@ export default function OrderModal({
       }
 
       const order = data.order;
-      const waText = `Hi Riina's Collections, I just placed order ${order.orderNumber} for ${product.name} (x${qty}). My name is ${name}.`;
+      const totalPrice = `GHS ${(product.price * qty).toFixed(2)}`;
+      const lines = [
+        `🛍️ *NEW ORDER — ${order.orderNumber}*`,
+        `━━━━━━━━━━━━━━━━━━━━`,
+        ``,
+        `📦 *Item Details*`,
+        `• Product: ${product.name}`,
+        `• Quantity: ${qty}`,
+        `• Unit Price: GHS ${product.price.toFixed(2)}`,
+        `• *Total: ${totalPrice}*`,
+        ...(note.trim() ? [`• Note: ${note.trim()}`] : []),
+        ``,
+        `👤 *Customer Details*`,
+        `• Name: ${name}`,
+        `• Phone: ${phone}`,
+        ``,
+        `━━━━━━━━━━━━━━━━━━━━`,
+        `Please confirm my order. Thank you! 🙏`,
+      ];
+      const waText = lines.join("\n");
       window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waText)}`, "_blank");
       router.push(`/receipt/${order.id}`);
     } catch {
