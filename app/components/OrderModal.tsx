@@ -62,6 +62,16 @@ export default function OrderModal({
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-brand-header">
+          <img
+            src="/Riinas_Collections_Logo_Combined.svg"
+            alt="Riina's Collections Logo"
+            className="modal-brand-logo"
+            width={36}
+            height={41}
+          />
+          <span className="modal-brand-text">Riina&apos;s Collections</span>
+        </div>
         <h3>{product.name}</h3>
         <p className="modal-sub">GHS {product.price.toFixed(2)} · fill in your details to order</p>
 

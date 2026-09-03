@@ -1,0 +1,42 @@
+<svg width="560" height="640" viewBox="0 0 560 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A227"/>
+      <stop offset="50%" stop-color="#E8D48B"/>
+      <stop offset="100%" stop-color="#B4881A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem: interlocked R + C monogram in a fine double ring (Dark theme edition) -->
+  <g transform="translate(280,190)">
+    <circle cx="0" cy="0" r="118" fill="none" stroke="#FAF8F3" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="104" fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+
+    <text x="-34" y="38" text-anchor="middle"
+          font-family="'Playfair Display','Georgia','Times New Roman',serif"
+          font-size="118" font-weight="600" fill="#FAF8F3">R</text>
+    <text x="40" y="38" text-anchor="middle"
+          font-family="'Playfair Display','Georgia','Times New Roman',serif"
+          font-size="118" font-weight="600" fill="url(#gold)" fill-opacity="0.95">C</text>
+
+    <line x1="-34" y1="60" x2="34" y2="60" stroke="#C9A227" stroke-width="1.5"/>
+  </g>
+
+  <!-- Combined wordmark: both names shown together, equal presence -->
+  <g text-anchor="middle">
+    <text x="280" y="410"
+          font-family="'Playfair Display','Georgia','Times New Roman',serif"
+          font-size="66" font-weight="500" letter-spacing="12"
+          fill="#FAF8F3">RIINAS</text>
+
+    <line x1="60" y1="440" x2="500" y2="440" stroke="#C9A227" stroke-width="1.5"/>
+
+    <text x="280" y="484"
+          font-family="'Playfair Display','Georgia','Times New Roman',serif"
+          font-size="44" font-weight="500" letter-spacing="14"
+          fill="#FAF8F3">COLLECTIONS</text>
+  </g>
+
+  <!-- fine outer rule to unify the whole mark as one lockup -->
+  <line x1="140" y1="522" x2="420" y2="522" stroke="#B4881A" stroke-width="1"/>
+</svg>

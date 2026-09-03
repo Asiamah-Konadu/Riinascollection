@@ -16,9 +16,16 @@ export default async function ReceiptPage({ params }: { params: { id: string } }
     <div className="receipt-shell">
       <div className="receipt-card">
         <div className="receipt-head">
-          <div>Riina&apos;s Collections</div>
+          <img
+            src="/Riinas_Collections_Logo_Combined.svg"
+            alt="Riina's Collections Logo"
+            className="receipt-logo-img"
+            width={72}
+            height={82}
+          />
+          <div className="receipt-brand-title">Riina&apos;s Collections</div>
           <div className="order-number">{order.orderNumber}</div>
-          <div style={{ fontSize: "0.8rem", color: "#6b6b63", marginTop: 4 }}>
+          <div style={{ fontSize: "0.82rem", color: "#6b6b63", marginTop: 4 }}>
             {new Date(order.createdAt).toLocaleString()}
           </div>
         </div>

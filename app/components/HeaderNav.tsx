@@ -21,9 +21,18 @@ export default function HeaderNav({
   return (
     <header>
       <div className="wrap header-row">
-        <a href="#top" className="wordmark">
-          <span className="mark">RC</span>
-          Riina&apos;s Collections
+        <a href="#top" className="wordmark" title="Riina's Collections">
+          <img
+            src="/Riinas_Collections_Logo_Combined.svg"
+            alt="Riina's Collections Logo"
+            className="brand-logo-img"
+            width={46}
+            height={52}
+          />
+          <span className="brand-text-block">
+            <span className="brand-title">Riina&apos;s</span>
+            <span className="brand-tagline">Collections</span>
+          </span>
         </a>
         <nav className="primary" style={open ? { display: "flex", flexDirection: "column", position: "absolute", top: "100%", left: 0, right: 0, background: "var(--paper)", padding: "18px 28px", borderBottom: "1px solid var(--line)", gap: 14 } : undefined}>
           {categories.map((c) => (

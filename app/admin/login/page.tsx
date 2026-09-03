@@ -43,6 +43,15 @@ function AdminLoginForm() {
   return (
     <div className="login-shell">
       <div className="login-card">
+        <div className="login-logo-wrap">
+          <img
+            src="/Riinas_Collections_Logo_Combined.svg"
+            alt="Riina's Collections Logo"
+            className="login-logo-img"
+            width={76}
+            height={87}
+          />
+        </div>
         <h1>Admin login</h1>
         <p>Sign in to manage products and orders.</p>
         <form onSubmit={handleSubmit}>

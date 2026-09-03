@@ -21,9 +21,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div className="admin-header">
         <div className="wrap">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span className="wordmark" style={{ color: "var(--cream)" }}>
-              <span className="mark">RC</span>Admin
-            </span>
+            <a href="/admin" className="wordmark" style={{ color: "var(--cream)", textDecoration: "none" }}>
+              <img
+                src="/Riinas_Collections_Logo_Light.svg"
+                alt="Riina's Collections"
+                className="admin-logo-img"
+                width={36}
+                height={41}
+              />
+              <span className="brand-text-block">
+                <span className="brand-title" style={{ color: "var(--cream)", fontSize: "1.05rem" }}>Riina&apos;s</span>
+                <span className="brand-tagline" style={{ color: "var(--gold-light)" }}>Admin Portal</span>
+              </span>
+            </a>
             <button className="btn ghost" style={{ borderColor: "rgba(244,239,226,0.4)", color: "var(--cream)" }} onClick={handleLogout}>
               Log out
             </button>

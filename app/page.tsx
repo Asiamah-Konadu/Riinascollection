@@ -30,17 +30,17 @@ export default async function HomePage() {
       <section className="hero" id="top">
         <div className="wrap hero-grid">
           <div>
-            <div className="hero-eyebrow">Kumasi · nationwide delivery</div>
+            <div className="hero-eyebrow">Kasoa · nationwide delivery</div>
             <h1>
               Dressed by <em>Riina</em>, delivered to your door.
             </h1>
             <p>
               Cottage skirts, joggers, dresses, and everyday basics — picked, packed, and sent
-              from Kumasi to anywhere in Ghana. Every order starts with a message.
+              from Kasoa to anywhere in Ghana. Every order starts with a message.
             </p>
             <div className="hero-actions">
               <a
-                className="btn"
+                className="btn gold"
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                   "Hi Riina's Collections, I'd like to place an order"
                 )}`}
@@ -49,7 +49,7 @@ export default async function HomePage() {
               >
                 Message us on WhatsApp
               </a>
-              <a className="btn ghost" href="#shop" style={{ borderColor: "rgba(244,239,226,0.4)" }}>
+              <a className="btn ghost" href="#shop" style={{ borderColor: "rgba(244,239,226,0.4)", color: "var(--cream)" }}>
                 Browse the rack
               </a>
             </div>
@@ -58,11 +58,26 @@ export default async function HomePage() {
                 <strong>{categories.length}</strong>core lines
               </div>
               <div>
-                <strong>Kumasi</strong>based
+                <strong>Kasoa</strong>based
               </div>
               <div>
                 <strong>Nationwide</strong>delivery
               </div>
+            </div>
+          </div>
+
+          <div className="hero-showcase">
+            <div className="hero-emblem-card">
+              <img
+                src="/Riinas_Collections_Logo_Light.svg"
+                alt="Riina's Collections Crest"
+                className="hero-emblem-badge"
+                width={170}
+                height={194}
+              />
+              <div className="hero-badge-caption">Riina&apos;s Collections</div>
+              <div className="hero-badge-divider"></div>
+              <div className="hero-badge-sub">Boutique &amp; Rack · Kasoa, Ghana</div>
             </div>
           </div>
         </div>
@@ -98,7 +113,7 @@ export default async function HomePage() {
               <div className="step-num">03</div>
               <div>
                 <h3>Pack &amp; send</h3>
-                <p>Once confirmed, your order is packed and sent out — Kumasi pickup or nationwide delivery.</p>
+                <p>Once confirmed, your order is packed and sent out — Kasoa pickup or nationwide delivery.</p>
               </div>
             </div>
           </div>
@@ -109,7 +124,7 @@ export default async function HomePage() {
         <div className="wrap">
           <div className="delivery-item">
             <div className="tag">Location</div>
-            <p>Based in Kumasi, with pieces available for local pickup or delivery.</p>
+            <p>Based in Kasoa, with pieces available for local pickup or delivery.</p>
           </div>
           <div className="delivery-item">
             <div className="tag">Delivery</div>
@@ -126,11 +141,21 @@ export default async function HomePage() {
         <div className="wrap">
           <div className="foot-top">
             <div>
-              <a href="#top" className="wordmark">
-                <span className="mark">RC</span>Riina&apos;s Collections
+              <a href="#top" className="wordmark" title="Riina's Collections">
+                <img
+                  src="/Riinas_Collections_Logo_Combined.svg"
+                  alt="Riina's Collections Logo"
+                  className="brand-logo-img"
+                  width={52}
+                  height={59}
+                />
+                <span className="brand-text-block">
+                  <span className="brand-title">Riina&apos;s</span>
+                  <span className="brand-tagline">Collections</span>
+                </span>
               </a>
               <p style={{ marginTop: 14, fontSize: "0.88rem", color: "#4a4a45", maxWidth: "32ch" }}>
-                Cottage skirts, joggers, dresses, and basics — from Kumasi, sent nationwide.
+                Cottage skirts, joggers, dresses, and basics — from Kasoa, sent nationwide.
               </p>
             </div>
             <div className="foot-links">
@@ -154,7 +179,7 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="foot-bottom">
-            <span>Kumasi, Ghana</span>
+            <span>Kasoa, Ghana</span>
             <span>Orders taken by message — no online checkout</span>
           </div>
         </div>
