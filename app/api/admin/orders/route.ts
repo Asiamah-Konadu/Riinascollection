@@ -9,9 +9,20 @@ export async function GET() {
     include: { items: true }
   });
   const plain = orders.map((o) => ({
-    ...o,
+    id: o.id,
+    orderNumber: o.orderNumber,
+    customerName: o.customerName,
+    phone: o.phone,
+    note: o.note,
     total: Number(o.total),
-    items: o.items.map((i) => ({ ...i, price: Number(i.price) }))
+    status: o.status,
+    createdAt: o.createdAt.toISOString(),
+    items: o.items.map((i) => ({
+      id: i.id,
+      name: i.name,
+      price: Number(i.price),
+      qty: i.qty
+    }))
   }));
   return NextResponse.json({ orders: plain });
 }

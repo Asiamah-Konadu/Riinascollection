@@ -49,7 +49,7 @@ export async function POST(req: Request) {
 
   const order = await prisma.$transaction(async (tx) => {
     const count = await tx.order.count();
-    const orderNumber = `CB-${String(count + 1).padStart(5, "0")}`;
+    const orderNumber = `RC-${String(count + 1).padStart(5, "0")}`;
     return tx.order.create({
       data: {
         orderNumber,
